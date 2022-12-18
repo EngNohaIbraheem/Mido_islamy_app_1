@@ -88,8 +88,8 @@ class _settingsTabState extends State<settingsTab> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Text(
-                    provider.appLanguage == 'light'
-                        ? AppLocalizations.of(context)!.light
+                    provider.appLanguage == 'dark'
+                        ? AppLocalizations.of(context)!.dark
                         : AppLocalizations.of(context)!.light,
                   ),
                   Icon(Icons.arrow_drop_down_outlined)

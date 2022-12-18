@@ -22,10 +22,12 @@ class _themeBottonSheetState extends State<themeBottonSheet> {
         children: [
           InkWell(
             onTap: (){
-              provider.currentTheme;
+             /// provider.themeMode;
+              provider.changeTheme(ThemeMode.light);
+
             },
             child:
-            provider.appTheme == 'light'?
+            provider.appTheme == ThemeMode.light?
             getSelectedItemWidget(AppLocalizations.of(context)!.light):
             getUnSelectedItemWidget(AppLocalizations.of(context)!.light),
 
@@ -35,10 +37,10 @@ class _themeBottonSheetState extends State<themeBottonSheet> {
           ),
           InkWell(
             onTap: (){
-              provider.currentTheme;
+              provider.changeTheme(ThemeMode.dark);
             },
             child:
-            provider.appTheme == 'dark'?
+            provider.appTheme == ThemeMode.dark?
             getSelectedItemWidget(AppLocalizations.of(context)!.dark):
             getUnSelectedItemWidget(AppLocalizations.of(context)!.dark),
 

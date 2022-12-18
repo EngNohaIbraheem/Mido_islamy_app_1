@@ -27,13 +27,13 @@ class _HomeScreenState extends State<HomeScreen> {
     return Stack(
       children: [
       provider.isDarkMode()?
-       Image.asset('assets/images/background.png',
+       Image.asset('assets/images/dark_background.png',
         width: double.infinity,
         height: double.infinity,
         fit: BoxFit.fill,
       )
        :
-      Image.asset('assets/images/dark_background.png',
+      Image.asset('assets/images/background.png',
         width: double.infinity,
         height: double.infinity,
         fit: BoxFit.fill,
